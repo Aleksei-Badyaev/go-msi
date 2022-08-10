@@ -201,6 +201,14 @@ func Main() {
 					Name:  "msi, m",
 					Usage: "Path to write resulting msi file to",
 				},
+				cli.StringFlag{
+					Name:  "version",
+					Usage: "The version of your program",
+				},
+				cli.StringFlag{
+					Name:  "display",
+					Usage: "The display version of your program",
+				},
 			},
 		},
 		{
@@ -627,6 +635,9 @@ func generateWixCommands(c *cli.Context) error {
 	msi := c.String("msi")
 	arch := c.String("arch")
 	bin := c.String("bin")
+	compression := c.String("compression")
+	version := c.String("version")
+	display := c.String("display")
 
 	if msi == "" {
 		return cli.NewExitError("--msi parameter must be set", 1)
@@ -657,6 +668,10 @@ func generateWixCommands(c *cli.Context) error {
 		fmt.Println("     go-msi set-guid")
 		return cli.NewExitError("Cannot proceed, manifest file is incomplete", 1)
 	}
+
+	wixFile.Compression = compression
+	wixFile.Version.User = version
+	wixFile.Version.Display = display
 
 	if err := wixFile.Normalize(); err != nil {
 		return cli.NewExitError(err.Error(), 1)
