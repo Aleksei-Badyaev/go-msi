@@ -9,14 +9,14 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/Aleksei-Badyaev/go-msi/manifest"
+	"github.com/Aleksei-Badyaev/go-msi/rtf"
+	"github.com/Aleksei-Badyaev/go-msi/templates"
+	"github.com/Aleksei-Badyaev/go-msi/util"
+	"github.com/Aleksei-Badyaev/go-msi/wix"
 	"github.com/Masterminds/semver"
 	"github.com/bmatcuk/doublestar"
 	"github.com/mh-cbon/stringexec"
-	"github.com/observiq/go-msi/manifest"
-	"github.com/observiq/go-msi/rtf"
-	"github.com/observiq/go-msi/templates"
-	"github.com/observiq/go-msi/util"
-	"github.com/observiq/go-msi/wix"
 	"github.com/urfave/cli"
 )
 

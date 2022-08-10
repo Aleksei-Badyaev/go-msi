@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/observiq/go-msi/msi"
+	"github.com/Aleksei-Badyaev/go-msi/msi"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module github.com/observiq/go-msi
+module github.com/Aleksei-Badyaev/go-msi
 
 go 1.17
 

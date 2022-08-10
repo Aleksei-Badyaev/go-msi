@@ -11,8 +11,8 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/Aleksei-Badyaev/go-msi/manifest"
 	"github.com/bmatcuk/doublestar"
-	"github.com/observiq/go-msi/manifest"
 )
 
 var funcMap = template.FuncMap{

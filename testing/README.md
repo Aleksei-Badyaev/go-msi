@@ -5,7 +5,7 @@ End-to-end testing with Docker on Windows containers.
 From project root:
 ```bat
 docker build -f testing/Dockerfile -t go-msi-testing:latest testing &&
-  docker run --rm -it -v C:/dev/src/github.com/observiq/go-msi:C:/gopath/src/github.com/observiq/go-msi go-msi-testing:latest
+  docker run --rm -it -v C:/dev/src/github.com/Aleksei-Badyaev/go-msi:C:/gopath/src/github.com/Aleksei-Badyaev/go-msi go-msi-testing:latest
 ```
 
 then from within the container:

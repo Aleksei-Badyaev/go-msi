@@ -26,7 +26,7 @@ func main() {
 	mustNotBeInstalled()
 
 	gopath := os.Getenv("GOPATH")
-	wd := filepath.Join(gopath, "src/github.com/observiq/go-msi/testing/hello")
+	wd := filepath.Join(gopath, "src/github.com/Aleksei-Badyaev/go-msi/testing/hello")
 	mustContainFile(wd, "hello.go")
 	mustChdir(wd)
 
