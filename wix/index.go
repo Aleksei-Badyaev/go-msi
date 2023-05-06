@@ -27,7 +27,7 @@ func GenerateCmd(wixFile *manifest.WixManifest, templates []string, msiOutFile, 
 		cmd += " " + filepath.Base(tpl)
 	}
 	cmd += eol
-	cmd += filepath.Join(path, "light") + " -ext WixUIExtension -ext WixUtilExtension -sacl -spdb "
+	cmd += filepath.Join(path, "light") + " -ext WixUIExtension -ext WixUtilExtension -sacl -spdb -sval "
 	cmd += " -out " + msiOutFile
 	for _, tpl := range templates {
 		cmd += " " + strings.Replace(filepath.Base(tpl), ".wxs", ".wixobj", -1)
